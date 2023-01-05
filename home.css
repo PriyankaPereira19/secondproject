@@ -63,7 +63,6 @@ input::placeholder{
 }
 .weatherDisplay{
     float: right;
-    margin-top: 1%;
     margin-left: 5%;
     position: absolute;
     font-size: 12px;
@@ -389,6 +388,9 @@ ul{
 .socilmedia{
     margin-left: 45%;
     width: 200px;
+}
+.socilmedia>span{
+    color: black !important;
 }
 .socialLogo{
     height:30px;
