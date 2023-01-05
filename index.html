@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesho</title>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <script src="home.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4338603d0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div id="brand">
+            <a href="#"><img src="./image/meesho_logo.png" alt="meesho_logo" title="meesho_logo" /></a>
+        </div>
+        <div class="searchText">
+            <i class="fa fa-search icon"></i>
+            <input type="text" placeholder="Try Saree, Kurti or Search by Product Code" name="" />
+        </div>
+        <div class="weatherForecast">
+            <button class="weatherBtn" onClick="geolocation()"><img src="./image/weather2.png"
+                    alt="weather_icon" /></button>
+            <div class="weatherDisplay">
+                <span id="out"></span><br>
+                <span id="weather"></span>
+            </div>
+        </div>
+        <div class="profileDiv">
+            <a href="#" id="profileLink">
+                <span class="fa-solid fa-user"></span>
+                <div>Profile</div>
+            </a>
+            <div class="signUp">
+                <span class="helloUser">Hello User!</span><br>
+                <span>To access your Meesho account</span>
+                <button>Sign Up</button>
+            </div>
+        </div>
+        <div class="cartDiv">
+            <a href="#" id="cartLink">
+                <span class="cart fa-solid fa-cart-shopping"></span>
+                <div>Cart</div>
+            </a>
+        </div>
+        <button onClick="changeMode()" class="fa-regular fa-sun"></button>
+    </header>
+    <div class="categorySearch">
+        <div class="categoryBar">
+            <div class="categoryName">
+                <button class="dropbtn">Women Ethnic</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Sarees</td>
+                            <td class="heading backColor">Kurtis</td>
+                            <td class="heading">Suits</td>
+                            <td class="heading backColor">Other Ethnic</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">All Sarees</a></td>
+                            <td class="backColor"><a href="#">All Kurtis</a></td>
+                            <td><a href="#">Cotton Suits</a></td>
+                            <td class="backColor"><a href="#">Blouses</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Silk Sarees</a></td>
+                            <td class="backColor"><a href="#">Anarkali Kurtis</a></td>
+                            <td><a href="#">Embroidered Suits</a></td>
+                            <td class="backColor"><a href="#">Dupattas</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Cotton Silk Sarees</a></td>
+                            <td class="backColor"><a href="#">Rayon Kurtis</a></td>
+                            <td><a href="#">Chanderi Suits</a></td>
+                            <td class="backColor"><a href="#">Lehanga</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Cotton Sarees</a></td>
+                            <td class="backColor"><a href="#">Cotton Kurtis</a></td>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#">Gown</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Georgette Sarees</a></td>
+                            <td class="backColor"><a href="#">Embroidered Kurtis</a></td>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#">Ethnic Bottom wear</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Women Western</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">TopWear</td>
+                            <td class="heading backColor">Bottom Wear</td>
+                            <td class="heading">Sleepwear</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tops</a></td>
+                            <td class="backColor"><a href="#">Jeans</a></td>
+                            <td><a href="#">Nightsuits</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Dresses</a></td>
+                            <td class="backColor"><a href="#">Jeggings</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Sweaters</a></td>
+                            <td class="backColor"><a href="#">Palazzos</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Jumpsuits</a></td>
+                            <td class="backColor"><a href="#">Shorts</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#">Skirts</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Men</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Top Wear</td>
+                            <td class="heading backColor">Bottom Wear</td>
+                            <td class="heading">Men Accessories</td>
+                            <td class="heading backColor">Men Footwear</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">All top Wear</a></td>
+                            <td class="backColor"><a href="#">Track Pants</a></td>
+                            <td><a href="#">Watches</a></td>
+                            <td class="backColor"><a href="#">Casual Shoes</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">T-shirts</a></td>
+                            <td class="backColor"><a href="#">Jeans</a></td>
+                            <td><a href="#">Belts</a></td>
+                            <td class="backColor"><a href="#">Sports Shoes</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Shirts</a></td>
+                            <td class="backColor"><a href="#">Trousers</a></td>
+                            <td><a href="#">Wallets</a></td>
+                            <td class="backColor"><a href="#">Sandals</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#"></a></td>
+                            <td><a href="#">Sunglasses</a></td>
+                            <td class="backColor"><a href="#">Formal Shoes</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#"></a></td>
+                            <td><a href="#">Bags</a></td>
+                            <td class="backColor"><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Kids</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Boys & Girls 2+ years</td>
+                            <td class="heading backColor">Toys & Accessories</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Dresses</a></td>
+                            <td class="backColor"><a href="#">Soft Toys</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#">Footwears</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#">Stationery</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"></a></td>
+                            <td class="backColor"><a href="#">Watches</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Home & Kitchen</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Home Furnishing</td>
+                            <td class="heading backColor">Home Decor</td>
+                            <td class="heading">Kitchen & Dining</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Bedsheets</a></td>
+                            <td class="backColor"><a href="#">All Home Decor</a></td>
+                            <td><a href="#">Kitchen Storage</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Doormats</a></td>
+                            <td class="backColor"><a href="#">Stickers</a></td>
+                            <td><a href="#">Cookware & Bakeware</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Curtains & Sheers</a></td>
+                            <td class="backColor"><a href="#">Clocks</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Mattress Protectors</a></td>
+                            <td class="backColor"><a href="#">Showpieces</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Beauty & Health</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Make Up</td>
+                            <td class="heading backColor">Wellness</td>
+                            <td class="heading">SKincare</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Face</a></td>
+                            <td class="backColor"><a href="#">Sanitizers</a></td>
+                            <td><a href="#">Deodorants</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Eyes</a></td>
+                            <td class="backColor"><a href="#">Oral Care</a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Lips</a></td>
+                            <td class="backColor"><a href="#"></a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Nails</a></td>
+                            <td class="backColor"><a href="#"></a></td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Jewellery & Accessories</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Jewellery</td>
+                            <td class="heading backColor">Women Accessory</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Jewellery Set</a></td>
+                            <td class="backColor"><a href="#">Bags</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Earrings</a></td>
+                            <td class="backColor"><a href="#">Watches</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Bangles</a></td>
+                            <td class="backColor"><a href="#">Hair Accessories</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Necklace</a></td>
+                            <td class="backColor"><a href="#">Sunglasses</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Rings</a></td>
+                            <td class="backColor"><a href="#"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Footwear</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading ">Women Footwear</td>
+                            <td class="heading backColor">Men Footwear</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Flats</a></td>
+                            <td class="backColor"><a href="#">Sports Shoes</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Bellies</a></td>
+                            <td class="backColor"><a href="#">Casual Shoes</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Heels</a></td>
+                            <td class="backColor"><a href="#">Formal Shoes</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categoryName">
+                <button class="dropbtn">Electronics</button>
+                <div class="dropdown-content">
+                    <table>
+                        <tr>
+                            <td class="heading">Mobile & Accessories</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">All Mobiles & Accessories</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Smartwatches</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Mobile Holders</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Mobile cases and covers</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coupon">
+        <button onClick="closeCoupon()">&times;</button>
+        <a href="#"><img src="./image/advertisement.jpg" alt="advertisement" height="350px" width="550px"/></a>
+    </div>
+    <div class="container">
+        <div id=devCarousel class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#devCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#devCarousel" data-slide-to="1"></li>
+                <li data-target="#devCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="#"><img src="./image/image10.jpg" alt="slider" /></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="./image/image11.jpg" alt="slider" /></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="./image/image12.jpg" alt="slider" /></a>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#devCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#devCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <hr>
+        <h2 class="text-center"><strong>Top Category to choose from</strong></h2>
+    </div>
+    <div class="bg-image">
+        <div class="div1"><a href="#"><img src="./image/image2.webp" alt="Category"></a></div>
+        <div class="div2">
+            <div class="divTitle"><span>Fashion Store</span></div>
+            <div class="divImgs">
+                <div class="divimg1"><a href="#"><img src="./image/image3.webp" alt="Category"></a></div>
+                <div class="divimg2"><a href="#"><img src="./image/image4.webp" alt="Category"></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-image2">
+        <div class="div1text">
+            <span>Essentials</span>
+        </div>
+        <div class="div2img">
+            <a href="#"><img src="./image/image5.webp" alt="Category"></a>
+            <a href="#"><span>Beauty</span></a>
+        </div>
+        <div class="div3img">
+            <a href="#"><img src="./image/image6.webp" alt="Category"></a>
+            <a href="#"><span>Home</span></a>
+        </div>
+        <div class="div4img">
+            <a href="#"><img src="./image/image7.webp" alt="Category"></a>
+            <a href="#"><span>Electronics</span></a>
+        </div>
+    </div>
+    <footer>
+        <div class="textfoot">
+            <p>Shop Non-Stop on Meesho</p>
+        </div>
+        <div class="footDivContainer">
+            <div class="footDiv">
+                <ul>
+                    <li>Trusted by more than 1 Crore Indians</li>
+                    <li>Cash on Delivery | Free Delivery </li>
+                </ul>
+            </div>
+            <div class="footDiv">
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Become a supplier</a></li>
+                    <li><a href="#">Our Influencer Program</a></li>
+                    <li><a href="#">Hall of Fame</a></li>
+                </ul>
+            </div>
+            <div class="footDiv">
+                <ul>
+                    <li><a href="#">legal & Policy</a></li>
+                    <li><a href="#">Meesho Tech Blog</a></li>
+                    <li><a href="#">Notices & Return</a></li>
+                </ul>
+            </div>
+            <div class="footDiv noborder">
+                <ul>
+                    <li>fashnear Technologies Private Limited;</li>
+                    <li>Vaishnavi Signature, No. 78/9</li>
+                    <li>Outer Ring Road, Bellandur</li>
+                    <li>Varthur Hobli, Bengaluru-56103</li>
+                    <li>Karnataka, India</li>
+                    <li>E-mail address</li>
+                    <li>query@meesho.com</li>
+                    <li>2015-2023 Meesho.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="socilmedia">
+            <span>Reach out to us</span><br>
+            <a href="">
+                <img src="https://i.ibb.co/dtzG625/facebook.png" alt="fblogo" class="socialLogo" />
+            </a>
+            <a href="">
+                <img src="https://i.ibb.co/GHKVNYt/insta.png" alt="fblogo" class="socialLogo" />
+            </a>
+            <a href="">
+                <img src="https://i.ibb.co/w07K2Vn/youtube1.png" alt="fblogo" class="socialLogo" />
+            </a>
+        </div>
+    </footer>
+    <script>
+        window.onload = loadCoupon()
+    </script>
+</body>
+</html>

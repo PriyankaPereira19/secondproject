@@ -1,0 +1,414 @@
+body{
+    background-color: white;
+    color: black;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.mydark{
+    background-color:rgb(51, 49, 49);
+    color:white
+}
+
+/* header */
+header{
+    height: 60px;
+}
+#brand{
+    float: left;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+#brand>a>img{
+   height: 30px;
+   width: 125px;
+}
+.searchText{
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.searchText i {
+    position: absolute;
+}
+.icon {
+    padding: 10px;
+    text-align: center;
+    color: rgb(171, 170, 170);
+}
+.searchText>input{
+    width: 300px;
+    height: 35px;
+    font-size: 13px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input::placeholder{
+    color: rgb(183, 181, 181);
+    padding-left: 8%;
+}
+.weatherForecast{
+    float: left;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.weatherBtn{
+    float: left;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 30px;
+}
+.weatherBtn img{
+    width: 40px;
+    height: 30px;
+}
+.weatherDisplay{
+    float: right;
+    margin-top: 1%;
+    margin-left: 5%;
+    position: absolute;
+    font-size: 12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.profileDiv{
+    float: right;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+    margin-right: 10%;
+    margin-top: 1%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.profileDiv>a:hover{
+    text-decoration: none !important;
+}
+.profileDiv>a>span{
+    padding-left: 30%;
+}
+.signUp{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    background-color: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(201, 198, 198, 0.2);
+    z-index: 1;
+    padding: 10px;
+}
+.signUp button{
+    border: none;
+    background-color: rgb(244 51 151);
+    color: white;
+    border-radius: 3px;
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.signUp .helloUser{
+    font-size: 16px;
+    line-height: 0.2;
+    color: black;
+}
+.signUp span{
+    font-size: 11px;
+    color: rgb(138, 138, 138);
+}
+.signUp button:hover{
+    background-color: rgb(231, 107, 186);
+}
+.profileDiv:hover .signUp{
+    display: block;
+}
+.cartDiv{
+    float: right;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+    margin-top: 1%;
+    margin-right: 1%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.cartDiv>a{
+    text-decoration: none !important;
+}
+.cartDiv>a>span{
+    padding-left: 10%;
+}
+.fa-regular{
+    float: right;
+    border: none;
+    background-color: transparent;
+    margin-right: 2%;
+    margin-top: 2%;
+    color: rgb(11, 66, 203);
+}
+.fa-regular:active{
+    color: gray ;
+}
+
+/* Category Search */
+.categorySearch{
+    height: 45px;
+    border-top: 1.5px solid rgb(202, 200, 200);
+    border-bottom: 1px solid rgb(202, 200, 200);
+    width: auto;
+}
+.categoryBar{
+    margin: 0 0 0 10%;
+    width: inherit;
+}
+.categoryName{
+    margin-right: 1.1%;
+    position: relative;
+    display: inline-block;
+}
+.categoryName button{
+    font-size: 12px;
+    text-decoration: none !important;
+    border: none;
+    height: 43px;
+    background-color: transparent; 
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(201, 198, 198, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: rgb(129, 127, 127);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    line-height: 0.2;
+}
+.dropdown-content a:hover {
+    color: black;
+    border: none;
+    text-decoration: none;
+}
+  
+.categoryName:hover .dropdown-content {
+    display: block;
+}
+  
+.categoryName:hover .dropbtn{
+    color: rgb(244 51 151);
+    border-bottom: 2px solid rgb(244 51 151);
+}
+.dropdown-content .heading{
+    width: 340px;
+    padding: 20px 16px 16px 20px;
+    color: rgb(244 51 151);
+}
+.dropdown-content table{
+    width: 600px;
+    margin-left: 2%;
+    table-layout: auto;
+}
+.dropdown-content .backColor{
+    background-color: rgb(241, 241, 241);
+}
+
+/* Carousel */
+#devCarousel{
+    margin-top: 2%;
+}
+.item img{
+    height: 300px !important;
+}
+
+/* Category Image */
+.bg-image{
+    background-image: url("./image/image9.jpg");
+    height: 400px !important; 
+    width: 70% !important;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+.div1{
+    float: left;
+    width: 40%;
+    height: 400px;
+}
+.div1 img{
+    padding: 5%;
+    margin-top: 10%;
+    height: 360px;
+}
+.div2{
+    float: left;
+    width: 60%;
+    height: 400px;
+}
+.div2 .divTitle{
+    height: 150px;
+    color: black;
+    font-size: 50px;
+    padding-top: 10%;
+    text-align: center;
+    font-family:cursive;
+}
+.div2 .divImgs{
+    height: 200px;
+}
+.divImgs img{
+    width:49%;
+    float: left;
+    height: 240px;
+    padding: 10px;
+}
+.bg-image2{
+    background-image: url("./image/image13.png");
+    height: 400px !important; 
+    width: 70% !important;
+    margin-left: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.bg-image2 .div1text{
+    float: left;
+    padding-top: 10%;
+    width: 30%;
+    height: 400px;
+}
+.div1text span{
+    padding-left:10%;
+    color: rgb(3, 184, 3);
+    font-weight: bolder;
+    font-size: 45px;
+    text-shadow: 2px 2px 5px white;
+}
+.bg-image2 .div2img{
+    float: left;
+    margin-top: 5%;
+    width: 20%;
+    height: 400px;
+}
+.div2img img{
+    width:90%;
+    height: 200px;
+    padding: 5%;
+    margin-bottom: 10%;
+}
+.div2img span{
+    padding: 10px;
+    margin-left: 25%;
+    width: 50px;
+    height: 20px;
+    color: rgb(3, 184, 3);
+    background-color: white;
+    border: 3px solid rgb(176, 248, 176);
+    border: none;
+}
+.bg-image2 .div3img{
+    float: left;
+    width: 20%;
+    margin-top: 5%;
+    height: 400px;
+}
+.div3img img{
+    width:90%;
+    height: 200px;
+    padding: 5%;
+    margin-bottom: 10%;
+}
+.div3img span{
+    padding: 10px;
+    margin-left: 25%;
+    width: 50px;
+    height: 20px;
+    color: rgb(3, 184, 3);
+    background-color: white;
+    border: 3px solid rgb(176, 248, 176);
+    border: none;
+} 
+.bg-image2 .div4img{
+    float: left;
+    width: 20%;
+    margin-top: 5%;
+    height: 400px;
+}
+.div4img img{
+    width:90%;
+    height: 200px;
+    padding: 5%;
+    margin-bottom: 10%;
+}
+.div4img span{
+    padding: 10px;
+    margin-left: 25%;
+    width: 50px;
+    height: 20px;
+    color: rgb(3, 184, 3);
+    background-color: white;
+    border: 3px solid rgb(176, 248, 176);
+    border: none;
+}  
+
+/* footer */
+footer{
+    background-color: rgb(241, 241, 247);
+    width: auto;
+    height:auto;
+    margin-bottom: 0;
+}
+.textfoot{
+    font-size: 30px;
+    margin-left: 10%;
+    width: 500px;
+    margin-bottom: 1%;
+    color: black !important;
+}
+.footDivContainer{
+    margin-left: 10%;
+}
+.footDiv{
+    text-align: justify;
+    display:inline-block;
+    width:23%;
+    color: black !important;
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.footDiv a{
+    text-decoration: none !important;
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+.noborder{
+    border:none
+}
+.socilmedia{
+    margin-left: 45%;
+    width: 200px;
+}
+.socialLogo{
+    height:30px;
+    width:30px;
+    text-align: center;
+}
+
+/* Coupon */
+.coupon{
+    height:350px;
+    width:550px;
+    position:absolute;
+    margin-top:1%;
+    margin-left:30%;
+    z-index: 100;
+    display:none;
+}
+.coupon>button{
+    background-color: white;
+    position:absolute;
+    font-weight: bold;
+    border: none;
+}
